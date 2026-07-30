@@ -1,0 +1,6 @@
+{
+  "id": "personaplex",
+  "label": "PersonaPlex",
+  "tone": "switchable multi-persona",
+  "model": "mercury-2"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "synthia",
+  "label": "Synthia Voice",
+  "tone": "warm LATAM feminine",
+  "model": "mercury-2",
+  "voice": "synthia"
+}

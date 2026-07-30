@@ -1,0 +1,42 @@
+{
+  "model": {
+    "provider": "groq",
+    "base_url": "https://api.groq.com/openai/v1",
+    "api_key": "<REDACTED>",
+    "model": "llama-3.3-70b-versatile",
+    "max_tokens": "<REDACTED>",
+    "reasoning_effort": "low",
+    "temperature": 0.4
+  },
+  "groq": {
+    "api_key": "<REDACTED>",
+    "model": "llama-3.3-70b-versatile",
+    "base_url": "https://api.groq.com/openai/v1"
+  },
+  "elevenlabs": {
+    "api_key": "<REDACTED>",
+    "voice_id": "CwhRBWXzGAHq8TQ4Fs17",
+    "model_id": "eleven_turbo_v2_5",
+    "model_id_expressive": "eleven_v3",
+    "browser_fallback": true,
+    "voice_settings": {
+      "stability": 0.7,
+      "similarity_boost": 0.8,
+      "style": 0.2
+    }
+  },
+  "openai": {
+    "api_key": "<REDACTED>",
+    "realtime_model": "gpt-realtime",
+    "realtime_voice": "cedar"
+  },
+  "hue": {},
+  "agent": {
+    "enabled": true
+  },
+  "inception": {
+    "api_key": "<REDACTED>",
+    "base_url": "https://api.groq.com/openai/v1",
+    "model": "llama-3.3-70b-versatile"
+  }
+}

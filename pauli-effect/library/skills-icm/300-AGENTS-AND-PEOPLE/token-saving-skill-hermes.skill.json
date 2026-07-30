@@ -1,0 +1,12 @@
+{
+  "id": "token-saving-skill-hermes",
+  "name": "Token Saving Skill (Hermes)",
+  "shelf": "300-AGENTS-AND-PEOPLE",
+  "source_path": "/opt/pauli-effect/library/skills-icm/300-AGENTS-AND-PEOPLE/token-saving-skill-hermes",
+  "entry": "/opt/pauli-effect/library/skills-icm/300-AGENTS-AND-PEOPLE/token-saving-skill-hermes/SKILL.md",
+  "lazy": true,
+  "load": "on-demand",
+  "access": [
+    "all"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "agent-workflow-builder",
+  "name": "Agent Workflow Builder (YouTube to A2A)",
+  "shelf": "600-YOUTUBE-WORKFLOWS",
+  "source_path": "/opt/pauli-effect/library/skills-icm/600-YOUTUBE-WORKFLOWS/agent-workflow-builder",
+  "entry": "/opt/pauli-effect/library/skills-icm/600-YOUTUBE-WORKFLOWS/agent-workflow-builder/SKILL.md",
+  "lazy": true,
+  "load": "on-demand",
+  "access": ["all"],
+  "tags": ["youtube", "scraping", "workflows", "a2a", "brightdata", "mcp"],
+  "description": "Convert YouTube channels into executable A2A agent workflows. Uses yt-dlp with BrightData fallback. Generates 5-agent workflows with guardrails and monitoring."
+}

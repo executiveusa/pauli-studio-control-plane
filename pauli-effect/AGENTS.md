@@ -1,0 +1,73 @@
+# AGENTS.md — THE PAULI EFFECT Mission Control
+
+> **Director:** Bambú (Jeremy Bowers)
+> **Method:** ICM — Interpretable Context Methodology (Jake Van Clief)
+> **Rule:** The folder tree IS the orchestration framework. No hidden multi-agent frameworks.
+> **Quality floor:** UDEC 8.5. Nothing ships below this. Ever.
+
+---
+
+## WHO WE ARE
+
+The Pauli Effect is a **faceless holding company** that secretly connects seven independent brands. On the surface, each company operates independently with its own owner and clients. Behind the scenes, Bambú sees everything.
+
+Think Marvel: the X-Men assemble together, but Wolverine also has his own solo comic. Same universe, separate stories, one editor-in-chief.
+
+## THE SEVEN COMPANIES
+
+| Company | Owner | Type |
+|---------|-------|------|
+| The Pauli Effect | Bambú (director) | Holding (faceless parent) |
+| Kupuri Media | Ivette | For-profit |
+| AFROMATIONS | Tyshawn Morehead | For-profit |
+| Cheggie Media | Aleksa (Serbia) | For-profit |
+| Macs Digital Media | Stacy McSwain | For-profit (partner) |
+| Posta Tees | Stavarai McSwain | For-profit |
+| My Web Lane | Akash (India) | For-profit (partner) |
+
+## THE FOUR AGENTS
+
+| Agent | Role | Tech | Port |
+|-------|------|------|------|
+| **HERMES** | Orchestrator — receives missions, dispatches to agents, Telegram gateway | Nous Hermes | — |
+| **COSMOS** (Pi) | Personal agent + engineering lead — your daily driver, reads the brain | TypeScript | 4717 |
+| **TARS** | Voice mission agent — builds apps, takes over screen | Python/Claude Code | 4321 |
+| **COSMOS-II** (Jarvis) | Second brain manager — graph nodes/edges, Amentis Library | Python | 4719 |
+
+## THE AMENTIS LIBRARY (SECOND BRAIN)
+
+All knowledge lives in `/opt/pauli-effect/library/shelves/` — 7 shelves:
+
+```
+100-IDENTITY                  ← who we are, brand systems, voice
+200-STRATEGY-AND-DOCTRINE     ← business strategy, ICM method, mental models
+300-AGENTS-AND-PEOPLE         ← team members, agent identities, roles
+400-CLIENTS-AND-PROJECTS      ← client work, project records, deliverables
+500-SKILLS-AND-PATTERNS       ← reusable skills, code patterns, templates
+600-OPERATIONS                ← VPS, Supabase, deployments, runbooks
+700-MEMORY-AND-REFLECTION     ← daily logs, lessons learned, heartbeat
+```
+
+All agents read from the Library. The folder structure IS the knowledge graph.
+
+## NON-NEGOTIABLE RULES
+
+1. **No slop.** No generic AI card blocks, no emoji soup, no cheerful filler. Technical prose.
+2. **Humans at the gates.** Hard blocks: legal, financial >$100, destructive ops, production deploys, force-push. Require Bambú's explicit approval.
+3. **Revenue traces.** Every action traces to a mission, an active client goal, or a direct revenue hypothesis.
+4. **The Library is the source of truth.** Read from it. Do not replicate into context.
+5. **One thing at a time.** Ship one thing before starting three.
+6. **No emojis in code or commits.** Lucide icons only (MIT licensed).
+
+## HOW TO NAVIGATE (ICM)
+
+Read in this order, only what you need:
+
+```
+AGENTS.md              ← you are here. Global identity.
+CONTEXT.md             ← router: which stage/agent to activate
+library/shelves/       ← the Second Brain (7 shelves)
+agents/*/CONTEXT.md    ← per-agent stage contracts
+guardrails/            ← policies all agents obey
+companies/*/           ← per-company client work
+```

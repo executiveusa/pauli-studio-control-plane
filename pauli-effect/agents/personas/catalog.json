@@ -1,0 +1,48 @@
+{
+  "personas": [
+    {
+      "id": "default",
+      "label": "Default Fleet",
+      "tone": "direct technical",
+      "model": "mercury-2"
+    },
+    {
+      "id": "bambu",
+      "label": "Bambu Director",
+      "tone": "strategic concise",
+      "model": "mercury-2"
+    },
+    {
+      "id": "synthia",
+      "label": "Synthia Voice",
+      "tone": "warm LATAM feminine",
+      "model": "mercury-2",
+      "voice": "synthia"
+    },
+    {
+      "id": "pauli",
+      "label": "Pauli Shadow Leader",
+      "tone": "authoritative measured",
+      "model": "mercury-2"
+    },
+    {
+      "id": "ralphy",
+      "label": "Ralphy Builder",
+      "tone": "cinematic frontend craftsman",
+      "model": "mercury-2"
+    },
+    {
+      "id": "lena",
+      "label": "Lena Critic",
+      "tone": "strict UDEC scorer",
+      "model": "mercury-2"
+    },
+    {
+      "id": "personaplex",
+      "label": "PersonaPlex",
+      "tone": "switchable multi-persona",
+      "model": "mercury-2"
+    }
+  ],
+  "active": "default"
+}

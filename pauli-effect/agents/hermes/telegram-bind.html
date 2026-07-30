@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head><title>Telegram Bind - Pauli Effect</title>
+<style>
+body { font-family: system-ui; background: #0a0a0a; color: #eee; padding: 40px; max-width: 600px; margin: 0 auto; }
+h1 { color: #F5A617; }
+.step { background: #1a1a1a; border: 1px solid #333; border-radius: 8px; padding: 20px; margin: 16px 0; }
+.step h3 { color: #4ade80; margin-top: 0; }
+code { background: #222; padding: 2px 6px; border-radius: 4px; color: #f59e0b; }
+input { background: #1a1a1a; border: 1px solid #444; color: #eee; padding: 8px 12px; border-radius: 6px; width: 200px; font-size: 14px; }
+button { background: #F5A617; color: #000; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; }
+button:hover { background: #e6950a; }
+#result { margin-top: 16px; padding: 12px; border-radius: 6px; display: none; }
+.success { background: #064e3b; border: 1px solid #10b981; }
+.error { background: #450a0a; border: 1px solid #ef4444; }
+</style>
+</head>
+<body>
+<h1>Telegram Chat Binding</h1>
+<p>Bind your Telegram chat to The Pauli Effect fleet.</p>
+
+<div class="step">
+<h3>Step 1: Message the Bot</h3>
+<p>Open Telegram and send <code>/start</code> to <a href="https://t.me/Pauli_the_paulibot" style="color:#F5A617">@Pauli_the_paulibot</a></p>
+</div>
+
+<div class="step">
+<h3>Step 2: Get Your Chat ID</h3>
+<p>After messaging the bot, visit:<br>
+<code>https://api.telegram.org/bot8334090984:AAELS-YOMeZ72SaIPp79zl_YcVCjJxDqGhY/getUpdates</code></p>
+<p>Look for <code>"chat":{"id":</code> in the response - that number is your chat_id.</p>
+</div>
+
+<div class="step">
+<h3>Step 3: Enter Chat ID</h3>
+<input type="number" id="chatId" placeholder="Enter chat_id...">
+<button onclick="bindChat()">Bind Chat</button>
+<div id="result"></div>
+</div>
+
+<script>
+async function bindChat() {
+    const chatId = document.getElementById('chatId').value;
+    const result = document.getElementById('result');
+    if (!chatId) { result.textContent = 'Enter a chat_id'; result.className = 'error'; result.style.display = 'block'; return; }
+    try {
+        const resp = await fetch('https://api.thepaulieffect.com/hermes/telegram/bind', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({chat_id: parseInt(chatId)})
+        });
+        const data = await resp.json();
+        if (data.ok) {
+            result.textContent = 'Bound! chat_id=' + data.chat_id + ' - Hermes will now respond to your messages.';
+            result.className = 'success';
+        } else {
+            result.textContent = 'Error: ' + (data.error || 'unknown');
+            result.className = 'error';
+        }
+    } catch(e) {
+        result.textContent = 'Error: ' + e.message;
+        result.className = 'error';
+    }
+    result.style.display = 'block';
+}
+</script>
+</body>
+</html>

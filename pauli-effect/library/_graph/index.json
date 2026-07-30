@@ -1,0 +1,1404 @@
+{
+  "generated": "2026-07-14T15:32:40.146833",
+  "total_nodes": 113,
+  "total_duplicates": 2,
+  "shelves": {
+    "100-IDENTITY": 0,
+    "200-STRATEGY-AND-DOCTRINE": 0,
+    "300-AGENTS-AND-PEOPLE": 0,
+    "400-CLIENTS-AND-PROJECTS": 113,
+    "500-SKILLS-AND-PATTERNS": 0,
+    "600-OPERATIONS": 0,
+    "700-MEMORY-AND-REFLECTION": 0
+  },
+  "nodes": [
+    {
+      "id": "00fd6dc1-c920-4162-89a1-868af2af797f",
+      "slug": "nw-kids-2025",
+      "title": "NW KIDS 2025",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "nw-kids-2025.md",
+      "created": "2024-11-04T21:26:49.673795+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019627a7-d2e2-7153-9f43-ad623a6c421d",
+      "slug": "retro-toon",
+      "title": "RETRO TOON",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "retro-toon.md",
+      "created": "2025-04-12T01:40:32.100109+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "01962a5e-48e9-71b8-a0eb-b4634c6dbc65",
+      "slug": "pinokio-browser",
+      "title": "PINOKIO BROWSER",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "pinokio-browser.md",
+      "created": "2025-04-12T14:19:04.298920+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "01962bf5-9e78-7395-a060-6129de010f97",
+      "slug": "the-scaffold",
+      "title": "THE SCAFFOLD",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "the-scaffold.md",
+      "created": "2025-04-12T21:43:59.353910+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "01965376-4e34-76b4-948a-36b88d2233b3",
+      "slug": "proposal-generator",
+      "title": "Proposal GENERATOR",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "proposal-generator.md",
+      "created": "2025-04-20T13:49:44.378154+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "0196a0a4-7570-713b-8597-2d3d08b19b20",
+      "slug": "hvac-lead-generation",
+      "title": "HVAC LEAD GENERATION",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "hvac-lead-generation.md",
+      "created": "2025-05-05T13:30:54.709908+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "0196a979-7561-74ec-954a-c45f45974897",
+      "slug": "master-design-agent-code-name-synthia",
+      "title": "MASTER DESIGN AGENT -CODE NAME SYNTHIA",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "master-design-agent-code-name-synthia.md",
+      "created": "2025-05-07T06:40:31.586344+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "0196aa1e-58e5-7726-970a-e4a0c89b565f",
+      "slug": "luxury-copywriting",
+      "title": "Luxury Copywriting",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "luxury-copywriting.md",
+      "created": "2025-05-07T09:40:37.744721+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "0196b239-9b77-74fd-b22a-6a13fc860a5f",
+      "slug": "lone-wolf-agency-management",
+      "title": "LONE WOLF AGENCY MANAGEMENT",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "lone-wolf-agency-management.md",
+      "created": "2025-05-08T23:27:21.976756+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "0196b23b-7d0f-744c-80d5-858ee196f914",
+      "slug": "lone-wolf-ai-agency-masterclass",
+      "title": "LONE WOLF AI AGENCY MASTERCLASS",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "lone-wolf-ai-agency-masterclass.md",
+      "created": "2025-05-08T23:29:25.266944+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019716e4-9302-70f0-ad8e-f12be7cf595a",
+      "slug": "idea-to-sass-generator",
+      "title": "IDEA TO SASS GENERATOR",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "idea-to-sass-generator.md",
+      "created": "2025-05-28T12:36:08.071621+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "0197b081-2903-710c-9396-cf0463fb6062",
+      "slug": "yappyverse",
+      "title": "YAPPYVERSE",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "yappyverse.md",
+      "created": "2025-06-27T08:29:04.143439+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "0197b98f-efbc-7426-ae30-02434d1dd093",
+      "slug": "archon-x",
+      "title": "ARCHON-X",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "archon-x.md",
+      "created": "2025-06-29T02:41:47.453661+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "0198a0b0-b819-7762-9482-2b14f3191d87",
+      "slug": "social-security-project",
+      "title": "Social Security Project",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "social-security-project.md",
+      "created": "2025-08-12T23:49:52.798632+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "0198bc95-d4b2-7679-89f3-d7b0aa49ff39",
+      "slug": "metamorphosis",
+      "title": "METAMORPHOSIS",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "metamorphosis.md",
+      "created": "2025-08-18T09:49:52.692106+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019bc233-1074-7597-b682-cb77d45c762d",
+      "slug": "agent-zero",
+      "title": "AGENT-ZERO",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "agent-zero.md",
+      "created": "2026-01-15T15:08:05.109760+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019bec9d-3ae3-7504-841b-58ae17b7ea4b",
+      "slug": "attention",
+      "title": "Attention",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "attention.md",
+      "created": "2026-01-23T20:48:05.855188+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019c0867-b766-7040-9be6-31a7a506286f",
+      "slug": "aggressive-investment-plan",
+      "title": "Aggressive INVESTMENT PLAN",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "aggressive-investment-plan.md",
+      "created": "2026-01-29T06:19:00.834131+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019c62eb-829a-72d9-8b50-0cfa7cbb4018",
+      "slug": "upwork-agent",
+      "title": "Upwork Agent",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "upwork-agent.md",
+      "created": "2026-02-15T20:08:47.516080+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019c6954-02fe-76f3-9405-891c1f12f0a2",
+      "slug": "3d-avatar-world",
+      "title": "3D Avatar world",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "3d-avatar-world.md",
+      "created": "2026-02-17T02:00:39.423594+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019c6a99-d138-725d-b051-45decca5851b",
+      "slug": "directory-builder",
+      "title": "DIRECTORY BUILDER",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "directory-builder.md",
+      "created": "2026-02-17T07:56:31.417958+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019c6aa3-8ea9-72b6-844c-51bc3cb8c71d",
+      "slug": "convex",
+      "title": "Convex",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "convex.md",
+      "created": "2026-02-17T08:07:09.738779+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019c6b78-96e5-77b0-9839-c61ff13f89d8",
+      "slug": "agent-devika",
+      "title": "Agent Devika",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "agent-devika.md",
+      "created": "2026-02-17T11:59:51.015105+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019c7780-adc8-7560-b0e1-492436124c35",
+      "slug": "video-agent",
+      "title": "Video AGENT",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "video-agent.md",
+      "created": "2026-02-19T20:04:07.753618+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019c77d6-9e62-777c-ad40-4d0b0aaaedc6",
+      "slug": "frankenstack",
+      "title": "Frankenstack",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "frankenstack.md",
+      "created": "2026-02-19T21:37:59.907381+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019cf200-348a-7727-91ea-41dab613d07c",
+      "slug": "la-pizza-cubana",
+      "title": "La Pizza Cubana",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "la-pizza-cubana.md",
+      "created": "2026-03-15T14:57:05.676410+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019d0eeb-b199-719e-8b77-1a298e25e823",
+      "slug": "wifi-viewer",
+      "title": "Wifi Viewer",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "wifi-viewer.md",
+      "created": "2026-03-21T05:43:40.698719+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019d0ef3-13d5-72af-85e6-7dce713245f7",
+      "slug": "rust",
+      "title": "Rust",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "rust.md",
+      "created": "2026-03-21T05:51:44.598333+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019d103e-ea30-766d-885a-201fd680cc07",
+      "slug": "secrets",
+      "title": "secrets",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "secrets.md",
+      "created": "2026-03-21T11:54:11.890197+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019d14ff-2a36-7385-af3c-77844d8bd003",
+      "slug": "master-animal-training",
+      "title": "Master Animal Training",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "master-animal-training.md",
+      "created": "2026-03-22T10:02:40.055212+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019d3826-5a08-7292-b0f2-554b5dcfdc0b",
+      "slug": "rusty",
+      "title": "Rusty",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "rusty.md",
+      "created": "2026-03-29T05:52:10.761993+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019d4024-5712-71d3-a7a6-4cd9e3180d8e",
+      "slug": "digital-roldex",
+      "title": "Digital Roldex",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "digital-roldex.md",
+      "created": "2026-03-30T19:06:56.659803+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019d8aa6-e501-75fd-984d-699e2ea73b79",
+      "slug": "renta-de-audio",
+      "title": "Renta De Audio",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "renta-de-audio.md",
+      "created": "2026-04-14T06:21:26.659384+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019d8e3f-7c09-75ca-86a5-f1a73d2795b0",
+      "slug": "pi-agent",
+      "title": "Pi Agent",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "pi-agent.md",
+      "created": "2026-04-14T23:06:58.443049+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019dbf4f-90f2-73f2-8188-6d197bfdb710",
+      "slug": "private-driver",
+      "title": "Private Driver",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "private-driver.md",
+      "created": "2026-04-24T11:45:55.956620+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "019e00ee-24d1-7267-8004-f82dfa8688e4",
+      "slug": "vallarta-trades-templates",
+      "title": "VALLARTA TRADES TEMPLATES",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "vallarta-trades-templates.md",
+      "created": "2026-05-07T05:34:27.538825+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "1a285bb2-aeeb-404d-85fd-8f2e58a0b5c8",
+      "slug": "gtd-ai-integration-for-custom-agent",
+      "title": "GTD AI INTEGRATION FOR CUSTOM AGENT",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "gtd-ai-integration-for-custom-agent.md",
+      "created": "2024-11-25T20:05:07.046933+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "1a9b3ff7-a4f4-408a-b697-79d389377947",
+      "slug": "online-trading-card-arbitrage",
+      "title": "Online trading card arbitrage",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "online-trading-card-arbitrage.md",
+      "created": "2024-12-22T13:15:50.434240+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "1bdbe3f9-b91d-4f0b-8d2b-b7bfb167317d",
+      "slug": "ar-and-vr-projects",
+      "title": "AR AND VR PROJECTS",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "ar-and-vr-projects.md",
+      "created": "2025-03-09T18:01:29.724267+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "1db87549-2b21-4b23-9efb-2ec1d673798a",
+      "slug": "hustleclaude-teachs-financal-literacy",
+      "title": "\"Hustleclaude\"  Teachs Financal Literacy",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "hustleclaude-teachs-financal-literacy.md",
+      "created": "2024-11-26T07:54:11.989119+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "1fed084f-bf7c-4df9-8837-d536153ab566",
+      "slug": "plasma-treatment-on-plants",
+      "title": "Plasma Treatment On Plants",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "plasma-treatment-on-plants.md",
+      "created": "2025-01-05T16:27:02.571417+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "205ed8be-ec30-4a79-8a81-cdd877a00c9b",
+      "slug": "afromations",
+      "title": "Afromations",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "afromations.md",
+      "created": "2024-11-17T02:13:19.344200+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "2316b69d-3de1-47a5-a58f-ec9f5d1fb327",
+      "slug": "hustleclaude",
+      "title": "\"Hustleclaude\"",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "hustleclaude.md",
+      "created": "2024-11-18T08:59:40.932956+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "27b64691-5517-4275-a48e-c33859297a1d",
+      "slug": "infinite-architecture",
+      "title": "Infinite Architecture",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "infinite-architecture.md",
+      "created": "2024-11-22T09:16:50.796232+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "3355759d-5e52-400a-8e25-dddd620be00e",
+      "slug": "flipbooks",
+      "title": "Flipbooks",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "flipbooks.md",
+      "created": "2024-11-07T08:44:07.258043+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "3feb39b0-e1fb-4049-acbd-21fe031750dd",
+      "slug": "success-books-for-kids",
+      "title": "Success books for kids",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "success-books-for-kids.md",
+      "created": "2024-11-12T07:29:25.260629+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "421d3d25-5ab7-4a99-bc55-350b7852cc04",
+      "slug": "web-3-domain-selling-business",
+      "title": "web 3 domain selling business",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "web-3-domain-selling-business.md",
+      "created": "2025-03-02T22:21:56.707165+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "42335b73-2be0-45b2-8d1a-147c1c384001",
+      "slug": "direct-to-solar-greenhouse",
+      "title": "Direct To Solar Greenhouse",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "direct-to-solar-greenhouse.md",
+      "created": "2024-11-21T12:17:35.135731+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "423e5f70-95f2-4516-87cd-ba8068419c7f",
+      "slug": "black-economics-studies",
+      "title": "Black Economics Studies",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "black-economics-studies.md",
+      "created": "2024-11-22T08:45:00.097217+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "435003e5-00d6-4a9b-8bf8-3a37861e4846",
+      "slug": "how-to-use-claude",
+      "title": "How to use Claude",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "how-to-use-claude.md",
+      "created": "2024-08-22T23:06:55.872946+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "444b3eaf-94bf-4226-9c6f-1cb4b48ee1ed",
+      "slug": "automated-trademark-patent-agent",
+      "title": "Automated Trademark & Patent Agent",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "automated-trademark-patent-agent.md",
+      "created": "2024-12-09T01:27:09.345293+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "46218e63-29c5-4647-837d-d5709118cfa5",
+      "slug": "autonomous-email-agent",
+      "title": "Autonomous Email Agent",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "autonomous-email-agent.md",
+      "created": "2025-01-04T19:58:26.546929+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "4885ba21-2512-4044-9be9-d5439e8d2752",
+      "slug": "hustleclaude-master-international-marketing-agent-copywriter",
+      "title": "\"Hustleclaude\" Master International Marketing Agent & CopyWriter",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "hustleclaude-master-international-marketing-agent-copywriter.md",
+      "created": "2024-11-30T23:43:38.598353+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "4f6e8345-5bc7-44f6-9d2f-84a8a9f18e64",
+      "slug": "ai-in-seattle",
+      "title": "AI IN SEATTLE",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "ai-in-seattle.md",
+      "created": "2025-02-06T11:36:33.702166+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "527faf7b-346d-4af0-ab7e-6bff854f82e3",
+      "slug": "quote-book",
+      "title": "quote book",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "quote-book.md",
+      "created": "2025-03-08T12:02:41.193221+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "534030ef-67ac-4497-848d-377dc61ba1af",
+      "slug": "automated-project-manager-el-panorama",
+      "title": "Automated Project Manager El panorama",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "automated-project-manager-el-panorama.md",
+      "created": "2024-12-01T08:24:11.351743+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "5506f182-7066-4b15-a3b6-f283e51be0f1",
+      "slug": "google-sites-test",
+      "title": "Google Sites Test",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "google-sites-test.md",
+      "created": "2025-01-16T11:14:02.854086+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "5703f976-da36-4f71-802d-79565ec8c24d",
+      "slug": "the-collection",
+      "title": "THE COLLECTION",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "the-collection.md",
+      "created": "2025-02-08T17:24:03.629269+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "57cedfac-ac0d-4409-a947-b0aa0a012977",
+      "slug": "mit-framework-for-presenting-solutions-prompts",
+      "title": "MIT FRAMEWORK FOR PRESENTING SOLUTIONS-PROMPTS",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "mit-framework-for-presenting-solutions-prompts.md",
+      "created": "2025-01-16T16:00:26.826585+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "5cb8b2e4-1d33-4551-8bb1-04d71735df3a",
+      "slug": "hvacplumbing",
+      "title": "HVAC/PLUMBING",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "hvacplumbing.md",
+      "created": "2025-03-06T07:21:33.131966+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "6189b53b-c960-4c50-b805-e0851f704394",
+      "slug": "geo-ag-for-kids",
+      "title": "Geo Ag For Kids",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "geo-ag-for-kids.md",
+      "created": "2024-11-18T06:41:36.418052+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "633b1c88-d0bb-4913-a78c-ffcab1daf3c8",
+      "slug": "financial-tracking",
+      "title": "Financial Tracking",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "financial-tracking.md",
+      "created": "2024-12-13T03:31:37.463850+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "69d523aa-97d7-4eb6-89d1-809b1107bdd6",
+      "slug": "the-culture-kitchen-ghost-kitchen",
+      "title": "The Culture Kitchen-Ghost Kitchen",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "the-culture-kitchen-ghost-kitchen.md",
+      "created": "2024-12-06T21:18:20.555994+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "69f2169d-7f75-4869-b69e-3eceeff74c1a",
+      "slug": "macs-digital-media",
+      "title": "Macs Digital Media",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "macs-digital-media.md",
+      "created": "2024-11-15T17:20:39.685839+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "6a7a0f44-e495-4d9a-a844-0d55c34870ce",
+      "slug": "online-visa-work-staffing-agent-for-hiring",
+      "title": "Online Visa & Work Staffing Agent For Hiring",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "online-visa-work-staffing-agent-for-hiring.md",
+      "created": "2025-02-05T21:14:45.974877+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "7066c748-8713-4077-a60d-77f112d30daf",
+      "slug": "hustlestack-generator",
+      "title": "HUSTLESTACK GENERATOR",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "hustlestack-generator.md",
+      "created": "2025-03-06T06:43:50.356612+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "73ca3eb3-4145-4cb6-9548-bed5150a6f5b",
+      "slug": "the-case-for-social-purpose-companies",
+      "title": "The Case For Social Purpose Companies",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "the-case-for-social-purpose-companies.md",
+      "created": "2025-01-10T08:16:52.899530+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "7b72fd7f-33c1-4b8d-a0a0-bf1275bac231",
+      "slug": "ebooks-organizer",
+      "title": "Ebooks Organizer",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "ebooks-organizer.md",
+      "created": "2024-12-16T04:19:04.617666+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "7b85cb58-3f20-4127-8cd5-f30f010b9cde",
+      "slug": "manora-media",
+      "title": "Manora Media",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "manora-media.md",
+      "created": "2024-11-23T08:22:49.016637+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "83835b2c-f3fd-4036-8e62-0fa540997e10",
+      "slug": "terabithia",
+      "title": "TERABITHIA",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "terabithia.md",
+      "created": "2025-03-06T12:44:57.644513+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "8afa538d-725e-4ec4-98dd-ae85f2da521a",
+      "slug": "hustleclaude-books-for-crooks-project",
+      "title": "Hustleclaude - \"Books For Crooks Project\"",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "hustleclaude-books-for-crooks-project.md",
+      "created": "2024-11-26T08:00:04.260079+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "97e7d273-96c8-46c2-9f73-5959bb5e238b",
+      "slug": "resources-companies-in-our-network",
+      "title": "Resources & Companies In Our Network",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "resources-companies-in-our-network.md",
+      "created": "2024-11-28T17:31:40.464093+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "9b9b70f0-bfee-4d47-9963-e50de6239629",
+      "slug": "hustleclaude-affiliate-marketing-mastermind",
+      "title": "Hustleclaude - Affiliate Marketing Mastermind",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "hustleclaude-affiliate-marketing-mastermind.md",
+      "created": "2024-12-07T06:45:17.071246+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "9cbf93bf-6392-4784-b35c-5605d6781f96",
+      "slug": "smart-sites",
+      "title": "SMART SITES",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "smart-sites.md",
+      "created": "2025-03-04T22:12:57.515878+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "9d35efb3-ee7e-4008-bf83-5b6260bb059f",
+      "slug": "breaking-the-pattern-a-social-project",
+      "title": "Breaking The Pattern- A Social Project",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "breaking-the-pattern-a-social-project.md",
+      "created": "2024-11-21T11:55:27.011815+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "a3c47943-e5ee-4114-9ae1-98c4ae335c8d",
+      "slug": "la-pina",
+      "title": "LA PINA",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "la-pina.md",
+      "created": "2025-03-26T11:05:48.742061+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "a6f94f8b-e03a-48ce-8fad-b47971c3a193",
+      "slug": "project-management-course",
+      "title": "Project Management Course",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "project-management-course.md",
+      "created": "2024-11-06T21:00:36.952748+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "a70120f1-10c2-4819-bec4-b93d634f2d61",
+      "slug": "make-automations",
+      "title": "MAKE AUTOMATIONS",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "make-automations.md",
+      "created": "2025-03-17T05:33:51.956465+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "ab51a90f-fc01-4899-8b88-37f9bd987679",
+      "slug": "clonely-fanz",
+      "title": "CLONELY FANZ",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "clonely-fanz.md",
+      "created": "2025-02-07T17:29:59.352645+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "ac6ece85-20cd-4a32-8fc9-b42f7e8a1cc8",
+      "slug": "airbnb-automated-app",
+      "title": "AIRBNB AUTOMATED APP",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "airbnb-automated-app.md",
+      "created": "2025-03-27T23:25:14.511225+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "adfce808-e008-4578-a3ed-49f18db96849",
+      "slug": "bambu-blog-topics",
+      "title": "Bambu Blog Topics",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "bambu-blog-topics.md",
+      "created": "2024-11-21T07:50:40.115049+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "ae904251-5d01-4ca7-9105-26a8ecaadef4",
+      "slug": "afromexican-tour",
+      "title": "Afromexican Tour",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "afromexican-tour.md",
+      "created": "2024-12-14T11:44:24.024364+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "b29042a2-74ef-4bbd-8269-5ead85f0cc1c",
+      "slug": "rompa-de-cabeza-puzzle-company",
+      "title": "Rompa De Cabeza / Puzzle  Company",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "rompa-de-cabeza-puzzle-company.md",
+      "created": "2024-11-12T09:06:07.116038+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "b2ed45eb-3315-45e1-9859-fe7efeea6ad4",
+      "slug": "the-oracle-digital-library",
+      "title": "The Oracle - Digital Library",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "the-oracle-digital-library.md",
+      "created": "2025-01-13T21:15:42.296290+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "b5a8b1ce-383f-4a92-be64-4b66ebec2eab",
+      "slug": "the-manipulated-man",
+      "title": "THE MANIPULATED MAN",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "the-manipulated-man.md",
+      "created": "2025-03-05T05:22:40.401836+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "babffa3e-3772-41c3-8528-fdf46ac21713",
+      "slug": "lambs-grace-bullies",
+      "title": "Lambs Grace Bullies",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "lambs-grace-bullies.md",
+      "created": "2024-11-13T11:03:07.869810+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "bae6161a-f263-4b25-a86d-a7f7e264cfee",
+      "slug": "offers",
+      "title": "Offers",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "offers.md",
+      "created": "2024-11-28T22:42:26.568153+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "bfeb3586-7515-4b1f-996e-4039ba600f6e",
+      "slug": "critical-thinking",
+      "title": "Critical Thinking",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "critical-thinking.md",
+      "created": "2025-01-09T06:27:42.056270+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "c00419a3-1e03-45b0-83af-ae5e6461585c",
+      "slug": "the-paulie-effect-the-legend-of-paulie-pt1",
+      "title": "The Paulie Effect -The Legend Of Paulie Pt1",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "the-paulie-effect-the-legend-of-paulie-pt1.md",
+      "created": "2024-12-06T04:27:40.298092+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "c0eb9dc6-7544-48e4-86c0-e7a7a45716eb",
+      "slug": "cosmos-talking-parrot-project",
+      "title": "Cosmos -Talking Parrot Project",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "cosmos-talking-parrot-project.md",
+      "created": "2024-11-21T10:58:43.689263+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "ce878b9c-8d85-424d-959d-aa8d2d3d0be3",
+      "slug": "kupuri-international",
+      "title": "Kupuri International",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "kupuri-international.md",
+      "created": "2024-11-28T09:54:46.132945+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "cff0f4e6-bbea-47ce-9f38-5a0c64c644cc",
+      "slug": "emotional-artificial-intellegence-awareness-training",
+      "title": "Emotional & Artificial Intellegence - Awareness Training",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "emotional-artificial-intellegence-awareness-training.md",
+      "created": "2024-12-01T00:58:27.436381+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "d051c3a8-b2a8-4f28-af43-8726d3ee4ea7",
+      "slug": "hustleclaude-aia-prototype-fundraising-agent",
+      "title": "\"Hustleclaude\" AIA Prototype-Fundraising Agent",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "hustleclaude-aia-prototype-fundraising-agent.md",
+      "created": "2024-11-30T02:04:12.981636+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "d0802702-3d0e-4b1d-8dc8-53580e599ea0",
+      "slug": "lead-generation",
+      "title": "Lead Generation",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "lead-generation.md",
+      "created": "2024-12-04T22:11:20.994595+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "d0ffcfa4-a8f6-406e-a688-253cfe627416",
+      "slug": "ai-tools-and-workflow-consultant",
+      "title": "AI Tools And Workflow Consultant",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "ai-tools-and-workflow-consultant.md",
+      "created": "2024-12-27T19:22:28.226648+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "d27e6ffd-a643-4ff9-82f3-2e8800b2f3d2",
+      "slug": "sweet-psycocibin",
+      "title": "Sweet Psycocibin",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "sweet-psycocibin.md",
+      "created": "2025-03-03T09:32:49.844877+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "d5854204-02aa-4b66-8db5-b79509d09e81",
+      "slug": "alpha-delta-recycling",
+      "title": "ALPHA-DELTA RECYCLING",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "alpha-delta-recycling.md",
+      "created": "2024-12-23T09:33:37.909414+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "d5b1e1d6-582a-4a90-a7e6-01f74e57b94a",
+      "slug": "hustleclaude-xrpl-agent",
+      "title": "\"Hustleclaude\" XRPL AGENT",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "hustleclaude-xrpl-agent.md",
+      "created": "2024-11-27T09:00:05.299195+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "d9a56a6d-4d04-4cb4-82ca-4043f1e82f84",
+      "slug": "taming-wall-street-ibc",
+      "title": "Taming Wall Street IBC",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "taming-wall-street-ibc.md",
+      "created": "2024-11-07T16:02:41.260324+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "da1de642-bea9-4850-9ffd-308d43cee7fa",
+      "slug": "nwkids",
+      "title": "NWKIDS",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "nwkids.md",
+      "created": "2024-11-04T20:25:38.404457+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "dcd0c42f-c6b8-4fbc-b931-098c5350a843",
+      "slug": "seattle-tourism-project",
+      "title": "Seattle Tourism Project",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "seattle-tourism-project.md",
+      "created": "2024-11-14T07:44:04.945799+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "e1547054-cd63-4ec8-be3f-1a85f8f1f5f6",
+      "slug": "mind-mappy-a-musical-brain-dump",
+      "title": "MIND MAPPY-A MUSICAL BRAIN DUMP",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "mind-mappy-a-musical-brain-dump.md",
+      "created": "2024-11-16T05:39:29.609351+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "e1b55e3e-c554-40ee-9e1d-e0963629dd64",
+      "slug": "3x-plumber-website",
+      "title": "3X Plumber website",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "3x-plumber-website.md",
+      "created": "2024-12-29T10:11:12.403429+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "ec6b75b8-401f-4215-9774-9a200178ceff",
+      "slug": "demo-bamboo-surfboard",
+      "title": "Demo Bamboo Surfboard",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "demo-bamboo-surfboard.md",
+      "created": "2024-12-06T12:34:52.131299+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "eccd5159-9c9c-4706-a02c-15a3677d0470",
+      "slug": "cover-magazine",
+      "title": "Cover Magazine",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "cover-magazine.md",
+      "created": "2024-11-29T00:05:08.290726+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "f1e6b4ae-5366-4843-8c83-ddb1e7f4b170",
+      "slug": "social-security",
+      "title": "Social Security",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "social-security.md",
+      "created": "2025-01-21T21:51:39.744485+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "f21964a9-0aab-4c15-83d5-3c6a0e2697ab",
+      "slug": "vertical-gravel-grow-tube-with-wick-intergration",
+      "title": "Vertical Gravel Grow Tube With Wick Intergration",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "vertical-gravel-grow-tube-with-wick-intergration.md",
+      "created": "2024-11-21T12:32:51.995570+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "f7bf43ec-837c-42d9-8d0b-5949a4c9ba05",
+      "slug": "ai-race-from-zero-to-100k",
+      "title": "AI Race from zero  to 100K",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "ai-race-from-zero-to-100k.md",
+      "created": "2024-12-06T12:12:37.070673+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "f8d61d84-5343-4a54-8a73-fb5f45543f7c",
+      "slug": "craft-master-poml-prompting-agent",
+      "title": "C.R.A.F.T -MASTER POML PROMPTING AGENT",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "craft-master-poml-prompting-agent.md",
+      "created": "2025-01-04T10:18:27.453367+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "f8f99603-b465-4170-a7cf-50bd386b3f83",
+      "slug": "ai-coding-senior-engineer",
+      "title": "AI CODING SENIOR ENGINEER",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "ai-coding-senior-engineer.md",
+      "created": "2025-03-23T07:32:04.096746+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "fa176a11-fc59-49ac-afe7-d21dce9d2d2e",
+      "slug": "smart-directory",
+      "title": "S.M.A.R.T Directory",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "smart-directory.md",
+      "created": "2024-12-20T08:36:25.458924+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "fd6112f1-bd36-430e-bf7b-bf1673b33b93",
+      "slug": "automated-pitch-agent",
+      "title": "Automated Pitch Agent -",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "automated-pitch-agent.md",
+      "created": "2024-12-08T23:10:16.273751+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "fdb705ab-2407-48bc-aa85-12763695555c",
+      "slug": "7g-health-life-insurance-plan",
+      "title": "7G Health & Life Insurance Plan",
+      "type": "project",
+      "shelf": "400-CLIENTS-AND-PROJECTS",
+      "file": "7g-health-life-insurance-plan.md",
+      "created": "2025-02-04T23:50:33.272546+00:00",
+      "tags": [
+        "project"
+      ]
+    },
+    {
+      "id": "skill-free-llm-proxy-zte",
+      "title": "Free LLM Proxy ZTE Installer",
+      "path": "/opt/pauli-effect/library/shelves/500-SKILLS-AND-PATTERNS/free-llm-proxy-zte-installer.md",
+      "shelf": "500-SKILLS-AND-PATTERNS",
+      "type": "skill",
+      "updated_at": "2026-07-16T03:47:37Z"
+    },
+    {
+      "id": "skill-hermes-design-studio",
+      "title": "Hermes Design Studio Workflow",
+      "path": "/opt/pauli-effect/agents/hermes/DESIGN_STUDIO_WORKFLOW.md",
+      "shelf": "300-AGENTS-AND-PEOPLE",
+      "type": "skill",
+      "updated_at": "2026-07-16T03:47:37Z"
+    }
+  ],
+  "edges": [],
+  "duplicates": [
+    {
+      "name": "How to use Claude",
+      "kept": "how-to-use-claude.md",
+      "duplicate": "how-to-use-claude.md",
+      "uuid": "b48128b2-333e-4c78-b6ec-c5bff68502c2"
+    },
+    {
+      "name": "How to use Claude",
+      "kept": "how-to-use-claude.md",
+      "duplicate": "how-to-use-claude.md",
+      "uuid": "d7746354-a0c6-40dc-a174-acb0d0573225"
+    }
+  ],
+  "updated_at": "2026-07-16T03:47:37Z"
+}

@@ -1,0 +1,6 @@
+{
+  "id": "lena",
+  "label": "Lena Critic",
+  "tone": "strict UDEC scorer",
+  "model": "mercury-2"
+}
