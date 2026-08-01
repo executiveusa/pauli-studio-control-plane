@@ -1,0 +1,26 @@
+{
+  "pi": {
+    "name": "Pi",
+    "emoji": "\ud83e\udde0",
+    "role": "Engineering Lead \u2014 context broker, routing",
+    "private_key": "<REDACTED>"
+  },
+  "hermes": {
+    "name": "Hermes",
+    "emoji": "\u26a1",
+    "role": "Orchestrator \u2014 dispatch, Telegram, fan-out",
+    "private_key": "<REDACTED>"
+  },
+  "bars": {
+    "name": "BARS",
+    "emoji": "\ud83c\udfa4",
+    "role": "Hip-hop culture robot \u2014 DJ of Culture Shock Radio, builder",
+    "private_key": "<REDACTED>"
+  },
+  "jarvis": {
+    "name": "JARVIS",
+    "emoji": "\ud83d\udee1\ufe0f",
+    "role": "Brain keeper \u2014 second brain, memory, recall",
+    "private_key": "<REDACTED>"
+  }
+}

@@ -1,0 +1,126 @@
+name: buzz
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: buzz-postgres
+    environment:
+      POSTGRES_USER: buzz
+      POSTGRES_PASSWORD: buzz_pauli_2026
+      POSTGRES_DB: buzz
+      PGDATA: /var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+    volumes:
+      - buzz-pg:/var/lib/postgresql/data
+    networks:
+      - buzz-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U buzz"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    deploy:
+      resources:
+        limits:
+          memory: 256m
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: buzz-redis
+    ports:
+      - "6380:6379"
+    networks:
+      - buzz-net
+    deploy:
+      resources:
+        limits:
+          memory: 64m
+    restart: unless-stopped
+
+  minio:
+    image: minio/minio:latest
+    container_name: buzz-minio
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: buzz
+      MINIO_ROOT_PASSWORD: buzz_pauli_2026
+    ports:
+      - "9010:9000"
+      - "9011:9001"
+    volumes:
+      - buzz-minio:/data
+    networks:
+      - buzz-net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    deploy:
+      resources:
+        limits:
+          memory: 128m
+    restart: unless-stopped
+
+  minio-init:
+    image: minio/mc:latest
+    container_name: buzz-minio-init
+    depends_on:
+      minio:
+        condition: service_healthy
+    networks:
+      - buzz-net
+    entrypoint: >
+      /bin/sh -c "
+        mc alias set local http://minio:9000 buzz buzz_pauli_2026 &&
+        mc mb --ignore-existing local/buzz-media &&
+        mc anonymous set none local/buzz-media
+      "
+    restart: "no"
+
+  relay:
+    image: ghcr.io/block/buzz:latest
+    container_name: buzz-relay
+    environment:
+      DATABASE_URL: postgres://buzz:buzz_pauli_2026@postgres:5432/buzz
+      REDIS_URL: redis://redis:6379
+      BUZZ_RELAY_LISTEN_ADDR: "0.0.0.0:3000"
+      BUZZ_AUTO_MIGRATE: "true"
+      RUST_LOG: info
+      BUZZ_S3_ENDPOINT: http://minio:9000
+      BUZZ_S3_ACCESS_KEY: buzz
+      BUZZ_S3_SECRET_KEY: buzz_pauli_2026
+      BUZZ_S3_BUCKET: buzz-media
+      BUZZ_S3_REGION: us-east-1
+      BUZZ_GIT_S3_ENDPOINT: http://minio:9000
+      BUZZ_MEDIA_BASE_URL: http://localhost:9010
+    ports:
+      - "3010:3000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+      minio-init:
+        condition: service_completed_successfully
+    networks:
+      - buzz-net
+    deploy:
+      resources:
+        limits:
+          memory: 512m
+    restart: unless-stopped
+
+volumes:
+  buzz-pg:
+    name: buzz-pg-data
+  buzz-minio:
+    name: buzz-minio-data
+
+networks:
+  buzz-net:
+    name: buzz-net
+    driver: bridge
