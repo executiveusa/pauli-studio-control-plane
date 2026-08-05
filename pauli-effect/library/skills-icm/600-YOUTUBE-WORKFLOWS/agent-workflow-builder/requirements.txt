@@ -6,15 +6,15 @@ supabase==2.4.1
 postgrest-py==0.13.0
 
 # YouTube/video extraction
-yt-dlp==2026.7.1
+yt-dlp==2026.7.4
 youtube-transcript-api==0.6.2
 
 # Environment & configuration
-python-dotenv==1.0.0
+python-dotenv==1.2.2
 
 # HTTP/web requests (for Bright Data fallback)
-requests==2.31.0
-aiohttp==3.9.1
+requests==2.33.0
+aiohttp==3.14.3
 
 # JSON & data handling
 pydantic==2.6.0
@@ -31,5 +31,5 @@ aiofiles==23.2.1
 pathlib2==2.3.7.post1
 
 # Testing (optional)
-pytest==7.4.3
+pytest==9.0.3
 pytest-asyncio==0.21.1
