@@ -34,6 +34,34 @@ Think Marvel: the X-Men assemble together, but Wolverine also has his own solo c
 | **TARS** | Voice mission agent — builds apps, takes over screen | Python/Claude Code | 4321 |
 | **COSMOS-II** (Jarvis) | Second brain manager — graph nodes/edges, Amentis Library | Python | 4719 |
 
+## SHARED BROWSER BUS
+
+Obscura is the preferred browser runtime for agent web interaction and verification across the fleet. It is infrastructure, not a new agent.
+
+Execution ladder:
+1. Existing structured API/tool source when it can satisfy the task.
+2. Obscura for DOM/CDP browser interaction, monitoring, and proof capture.
+3. Playwright/Chromium only when Obscura has a compatibility or rendering gap.
+4. Full computer-use/desktop control only when browser automation is insufficient.
+
+Agent responsibilities:
+- **HERMES:** choose and dispatch browser-capable work through the shared capability; do not duplicate browser implementations.
+- **COSMOS (Pi):** consume the browser capability through a provider-agnostic abstraction for engineering and agent workflows.
+- **TARS:** prefer Obscura before escalating to Chromium or full screen takeover.
+- **COSMOS-II (Jarvis):** use browser access for evidence gathering; never persist credentials/cookies into durable memory.
+- **Watcher/verification services:** use Obscura as the default runtime for production checks, screenshots, console/network inspection, and change detection.
+
+Proof standard for web-facing work: a deploy or tool success response is not production proof. Where applicable preserve final URL, expected page state/text, material console/network failures, screenshots, timestamp, commit SHA, and deployment identifier.
+
+Security standard:
+- no unrestricted credentials in browser prompts, page content, logs, screenshots, or memory;
+- scoped and isolated authenticated sessions;
+- private-network access denied by default unless explicitly required;
+- autonomous targets bounded by policy/domain allowlists and rate limits;
+- browser sessions disposable after sensitive workflows.
+
+Browser-provider details must remain behind a shared abstraction so Obscura can be replaced without rewriting agent logic.
+
 ## THE AMENTIS LIBRARY (SECOND BRAIN)
 
 All knowledge lives in `/opt/pauli-effect/library/shelves/` — 7 shelves:
