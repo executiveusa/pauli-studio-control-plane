@@ -31,7 +31,7 @@ pathfinder_geometry = "0.5"
 pathfinder_simd = "0.5.4"
 
 [dependencies.freetype]
-version = "0.7"
+version = "0.8"
 optional = true
 
 [dependencies.yeslogic-fontconfig-sys]
