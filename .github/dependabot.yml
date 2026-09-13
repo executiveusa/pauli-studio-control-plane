@@ -1,0 +1,65 @@
+version: 2
+updates:
+  - package-ecosystem: "cargo"
+    directory: "/pauli-effect/library/skills-icm/500-SKILLS-AND-PATTERNS/font-kit/font-kit-master/font-kit-master"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 1
+    groups:
+      all-dependencies:
+        patterns:
+          - "*"
+  - package-ecosystem: "cargo"
+    directory: "/pauli-effect/library/skills-icm/500-SKILLS-AND-PATTERNS/font-kit/font-kit-master/font-kit-master/c"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 1
+    groups:
+      all-dependencies:
+        patterns:
+          - "*"
+  - package-ecosystem: "npm"
+    directory: "/pauli-effect/agents/skills-api"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 1
+    groups:
+      all-dependencies:
+        patterns:
+          - "*"
+  - package-ecosystem: "npm"
+    directory: "/pauli-effect/library/skills-icm/ralphy/cli"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 1
+    groups:
+      all-dependencies:
+        patterns:
+          - "*"
+  - package-ecosystem: "npm"
+    directory: "/pauli-effect/library/skills-icm/ralphy/landing"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 1
+    groups:
+      all-dependencies:
+        patterns:
+          - "*"
+  - package-ecosystem: "pip"
+    directory: "/pauli-effect/agents/tars"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 1
+    groups:
+      all-dependencies:
+        patterns:
+          - "*"
+  - package-ecosystem: "pip"
+    directory: "/pauli-effect/library/skills-icm/600-YOUTUBE-WORKFLOWS/agent-workflow-builder"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 1
+    groups:
+      all-dependencies:
+        patterns:
+          - "*"
