@@ -2,7 +2,7 @@
 # Install with: pip install --break-system-packages -r requirements.txt
 
 # Supabase client for metrics logging
-supabase==2.31.0
+supabase==2.32.0
 postgrest-py==0.13.0
 
 # YouTube/video extraction
@@ -10,7 +10,7 @@ yt-dlp==2026.8.19
 youtube-transcript-api==1.2.4
 
 # Environment & configuration
-python-dotenv==1.2.3
+python-dotenv==1.2.4
 
 # HTTP/web requests (for Bright Data fallback)
 requests==2.34.2
