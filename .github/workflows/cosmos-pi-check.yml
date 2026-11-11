@@ -7,6 +7,8 @@ on:
       - 'pauli-effect/agents/hermes/**'
       - 'pauli-effect/test/cosmos-runtime.test.cjs'
       - 'fleet/adapter.js'
+      - 'observe/server.js'
+      - 'tools/observe-server.js'
       - '.github/workflows/cosmos-pi-check.yml'
   workflow_dispatch:
 permissions:
@@ -26,5 +28,7 @@ jobs:
           node --check pauli-effect/agents/skills-api/server.js
           node --check pauli-effect/agents/hermes/hermes_orchestrator.js
           node --check fleet/adapter.js
+          node --check observe/server.js
+          node --check tools/observe-server.js
       - name: Verify mock model prompt and API gates
         run: node --test pauli-effect/test/cosmos-runtime.test.cjs
