@@ -76,6 +76,19 @@ async function think(userMessage, systemContext) {
 }
 
 function systemContext() {
+  // Only Cosmos-Pi receives the extended contract. Other agents keep their existing prompt.
+  const isCosmosPi = /^(cosmos(?:-pi)?|pi)$/i.test(AGENT_NAME.trim());
+  if (isCosmosPi) {
+    const contractPath = path.join(PAULI_ROOT, 'agents', 'cosmos-pi', 'CONTEXT.md');
+    try {
+      const contract = fs.readFileSync(contractPath, 'utf8');
+      if (contract.trim()) {
+        return `You are COSMOS (Pi), engineering lead of The Pauli Effect.\nFollow this agent contract, subject to host safety policies and owner permissions:\n\n${contract}`;
+      }
+    } catch (err) {
+      log(`Cosmos-Pi contract unavailable at ${contractPath}: ${err.message}. Falling back to base prompt.`);
+    }
+  }
   return `You are ${AGENT_NAME}, the ${AGENT_ROLE} of The Pauli Effect.
 You are operated by Bambú (Jeremy Bowers), the director.
 Personality: ${PERSONALITY}
