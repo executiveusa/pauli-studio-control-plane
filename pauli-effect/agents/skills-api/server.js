@@ -146,7 +146,7 @@ function getSession(req) {
 
 function checkAuth(req) {
   const key = req.headers["x-access-key"];
-  if (ACCESS_PASSWORD && typeof key === "string" && key.length === ACCESS_PASSWORD.length && crypto.timingSafeEqual(Buffer.from(key), Buffer.from(ACCESS_PASSWORD))) return true;
+  if (ACCESS_PASSWORD && typeof key === "string" && Buffer.byteLength(key) === Buffer.byteLength(ACCESS_PASSWORD) && crypto.timingSafeEqual(Buffer.from(key), Buffer.from(ACCESS_PASSWORD))) return true;
   const sess = getSession(req);
   return !!sess;
 }
@@ -472,14 +472,14 @@ button:hover{background:#6d28d9}
       req.on("end", () => {
         const params = new URLSearchParams(body);
         const pw = params.get("password");
-        if (ACCESS_PASSWORD && typeof pw === "string" && pw.length === ACCESS_PASSWORD.length && crypto.timingSafeEqual(Buffer.from(pw), Buffer.from(ACCESS_PASSWORD))) {
+        if (ACCESS_PASSWORD && typeof pw === "string" && Buffer.byteLength(pw) === Buffer.byteLength(ACCESS_PASSWORD) && crypto.timingSafeEqual(Buffer.from(pw), Buffer.from(ACCESS_PASSWORD))) {
           const token = crypto.randomBytes(32).toString("hex");
           sessions.set(token, { created: Date.now() });
           const skillsFile = path.join(STANDALONE_DIR, "skills.html");
           const html = fs.existsSync(skillsFile) ? fs.readFileSync(skillsFile, "utf8") : "<h1>Skills browser not yet built</h1>";
           res.writeHead(200, {
             "Content-Type": "text/html",
-            "Set-Cookie": "session=" + token + "; Path=/standalone; HttpOnly; Max-Age=" + (SESSION_TTL_MS / 1000),
+            "Set-Cookie": "session=" + token + "; Path=/; HttpOnly; SameSite=Strict; Max-Age=" + (SESSION_TTL_MS / 1000),
           });
           return res.end(html);
         }
@@ -509,14 +509,14 @@ button:hover{background:#6d28d9}
       req.on("end", () => {
         const params = new URLSearchParams(body);
         const pw = params.get("password");
-        if (ACCESS_PASSWORD && typeof pw === "string" && pw.length === ACCESS_PASSWORD.length && crypto.timingSafeEqual(Buffer.from(pw), Buffer.from(ACCESS_PASSWORD))) {
+        if (ACCESS_PASSWORD && typeof pw === "string" && Buffer.byteLength(pw) === Buffer.byteLength(ACCESS_PASSWORD) && crypto.timingSafeEqual(Buffer.from(pw), Buffer.from(ACCESS_PASSWORD))) {
           const token = crypto.randomBytes(32).toString("hex");
           sessions.set(token, { created: Date.now() });
           const tokensFile = path.join(STANDALONE_DIR, "tokens.html");
           const html = fs.existsSync(tokensFile) ? fs.readFileSync(tokensFile, "utf8") : "<h1>Token tracker not yet built</h1>";
           res.writeHead(200, {
             "Content-Type": "text/html",
-            "Set-Cookie": "session=" + token + "; Path=/standalone/tokens; HttpOnly; Max-Age=" + (SESSION_TTL_MS / 1000),
+            "Set-Cookie": "session=" + token + "; Path=/; HttpOnly; SameSite=Strict; Max-Age=" + (SESSION_TTL_MS / 1000),
           });
           return res.end(html);
         }
