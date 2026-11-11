@@ -184,6 +184,11 @@ const server = http.createServer(async (req, res) => {
       });
     }
 
+    // Knowledge, skill definitions, execution history and persona metadata are private.
+    if ((url.pathname.startsWith("/skills") || url.pathname.startsWith("/tokens") || url.pathname.startsWith("/personas") || url.pathname.startsWith("/optimize")) && !checkAuth(req)) {
+      return send(res, ACCESS_PASSWORD ? 401 : 503, { error: "Unauthorized or SKILLS_ACCESS_PASSWORD not configured" });
+    }
+
     if (url.pathname === "/skills" && req.method === "GET") {
       const cat = loadCatalog();
       const shelf = url.searchParams.get("shelf");
