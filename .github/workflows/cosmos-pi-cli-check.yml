@@ -1,0 +1,36 @@
+name: Cosmos Pi CLI bootstrap validation
+on:
+  pull_request:
+    paths:
+      - '.pi/**'
+      - 'AGENTS.md'
+      - 'scripts/cosmos-desktop.ps1'
+      - '.github/workflows/cosmos-pi-cli-check.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  pi-cli:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify Cosmos bootstrap contracts
+        run: |
+          test -s AGENTS.md
+          test -s .pi/APPEND_SYSTEM.md
+          test -s pauli-effect/agents/cosmos-pi/CONTEXT.md
+          test -s pauli-effect/guardrails/HARD_BLOCKS.md
+          grep -q 'R-A-L-P-H-Y' .pi/APPEND_SYSTEM.md
+          grep -q 'company/HEART.md' .pi/APPEND_SYSTEM.md
+      - name: Install official Pi CLI
+        run: npm install -g @mariozechner/pi-coding-agent
+      - name: Verify real Pi executable
+        run: |
+          command -v pi
+          pi --version
+      - name: Note test boundary
+        run: echo "Pi binary and instructions validated; no model credentials or live coding-tool execution exercised."
