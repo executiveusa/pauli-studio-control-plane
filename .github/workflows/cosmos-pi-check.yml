@@ -1,0 +1,34 @@
+name: Cosmos Pi isolated checks
+on:
+  pull_request:
+    paths:
+      - 'pauli-effect/agents/cosmos-pi/**'
+      - 'pauli-effect/agents/skills-api/**'
+      - 'pauli-effect/agents/hermes/**'
+      - 'pauli-effect/test/cosmos-runtime.test.cjs'
+      - 'fleet/adapter.js'
+      - 'observe/server.js'
+      - 'tools/observe-server.js'
+      - '.github/workflows/cosmos-pi-check.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  syntax-and-mock:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify syntax
+        run: |
+          node --check pauli-effect/agents/cosmos-pi/server.js
+          node --check pauli-effect/agents/skills-api/server.js
+          node --check pauli-effect/agents/hermes/hermes_orchestrator.js
+          node --check fleet/adapter.js
+          node --check observe/server.js
+          node --check tools/observe-server.js
+      - name: Verify mock model prompt and API gates
+        run: node --test pauli-effect/test/cosmos-runtime.test.cjs

@@ -10,7 +10,7 @@ const PERSONA_DIR = path.join(ROOT, "agents/personas");
 const SHELVES = path.join(ROOT, "library/skills-icm");
 const DB_PATH = path.join(ROOT, "data/skills.db");
 const STANDALONE_DIR = path.join(ROOT, "agents/skills-api/standalone");
-const ACCESS_PASSWORD = "Sheraljean1";
+const ACCESS_PASSWORD = process.env.SKILLS_ACCESS_PASSWORD || "";
 const SESSION_TTL_MS = 30 * 60 * 1000;
 
 const sessions = new Map();
@@ -146,7 +146,7 @@ function getSession(req) {
 
 function checkAuth(req) {
   const key = req.headers["x-access-key"];
-  if (key === ACCESS_PASSWORD) return true;
+  if (ACCESS_PASSWORD && typeof key === "string" && Buffer.byteLength(key) === Buffer.byteLength(ACCESS_PASSWORD) && crypto.timingSafeEqual(Buffer.from(key), Buffer.from(ACCESS_PASSWORD))) return true;
   const sess = getSession(req);
   return !!sess;
 }
@@ -158,7 +158,7 @@ async function routeToAgent(agentSlug, message) {
   payload[agent.field] = message;
   const resp = await fetch(agent.url + agent.endpoint, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", ...(agentSlug === "pi" && process.env.PI_AGENT_ACCESS_TOKEN ? { Authorization: "Bearer " + process.env.PI_AGENT_ACCESS_TOKEN } : {}) },
     body: JSON.stringify(payload),
     signal: AbortSignal.timeout(120000),
   });
@@ -184,6 +184,11 @@ const server = http.createServer(async (req, res) => {
       });
     }
 
+    // Knowledge, skill definitions, execution history and persona metadata are private.
+    if ((url.pathname.startsWith("/skills") || url.pathname.startsWith("/tokens") || url.pathname.startsWith("/personas") || url.pathname.startsWith("/optimize")) && !checkAuth(req)) {
+      return send(res, ACCESS_PASSWORD ? 401 : 503, { error: "Unauthorized or SKILLS_ACCESS_PASSWORD not configured" });
+    }
+
     if (url.pathname === "/skills" && req.method === "GET") {
       const cat = loadCatalog();
       const shelf = url.searchParams.get("shelf");
@@ -207,6 +212,7 @@ const server = http.createServer(async (req, res) => {
     }
 
     if (url.pathname.startsWith("/skills/") && url.pathname.endsWith("/execute") && req.method === "POST") {
+      if (!checkAuth(req)) return send(res, ACCESS_PASSWORD ? 401 : 503, {error:"Unauthorized or SKILLS_ACCESS_PASSWORD not configured"});
       const id = decodeURIComponent(url.pathname.split("/")[2]);
       const body = await parseBody(req);
       const agent = body.agent || "jarvis";
@@ -378,6 +384,7 @@ const server = http.createServer(async (req, res) => {
     }
 
     if (url.pathname === "/tokens/log" && req.method === "POST") {
+      if (!checkAuth(req)) return send(res, ACCESS_PASSWORD ? 401 : 503, {error:"Unauthorized or SKILLS_ACCESS_PASSWORD not configured"});
       const database = getDb();
       if (!database) return send(res, 500, { error: "SQLite not available" });
 
@@ -413,6 +420,7 @@ const server = http.createServer(async (req, res) => {
     }
 
     if (url.pathname === "/personas/active" && req.method === "POST") {
+      if (!checkAuth(req)) return send(res, ACCESS_PASSWORD ? 401 : 503, {error:"Unauthorized or SKILLS_ACCESS_PASSWORD not configured"});
       const body = await parseBody(req);
       const id = body.id || body.active || body.persona;
       if (!id) return send(res, 400, { error: "id required" });
@@ -464,14 +472,14 @@ button:hover{background:#6d28d9}
       req.on("end", () => {
         const params = new URLSearchParams(body);
         const pw = params.get("password");
-        if (pw === ACCESS_PASSWORD) {
+        if (ACCESS_PASSWORD && typeof pw === "string" && Buffer.byteLength(pw) === Buffer.byteLength(ACCESS_PASSWORD) && crypto.timingSafeEqual(Buffer.from(pw), Buffer.from(ACCESS_PASSWORD))) {
           const token = crypto.randomBytes(32).toString("hex");
           sessions.set(token, { created: Date.now() });
           const skillsFile = path.join(STANDALONE_DIR, "skills.html");
           const html = fs.existsSync(skillsFile) ? fs.readFileSync(skillsFile, "utf8") : "<h1>Skills browser not yet built</h1>";
           res.writeHead(200, {
             "Content-Type": "text/html",
-            "Set-Cookie": "session=" + token + "; Path=/standalone; HttpOnly; Max-Age=" + (SESSION_TTL_MS / 1000),
+            "Set-Cookie": "session=" + token + "; Path=/; HttpOnly; SameSite=Strict; Max-Age=" + (SESSION_TTL_MS / 1000),
           });
           return res.end(html);
         }
@@ -501,14 +509,14 @@ button:hover{background:#6d28d9}
       req.on("end", () => {
         const params = new URLSearchParams(body);
         const pw = params.get("password");
-        if (pw === ACCESS_PASSWORD) {
+        if (ACCESS_PASSWORD && typeof pw === "string" && Buffer.byteLength(pw) === Buffer.byteLength(ACCESS_PASSWORD) && crypto.timingSafeEqual(Buffer.from(pw), Buffer.from(ACCESS_PASSWORD))) {
           const token = crypto.randomBytes(32).toString("hex");
           sessions.set(token, { created: Date.now() });
           const tokensFile = path.join(STANDALONE_DIR, "tokens.html");
           const html = fs.existsSync(tokensFile) ? fs.readFileSync(tokensFile, "utf8") : "<h1>Token tracker not yet built</h1>";
           res.writeHead(200, {
             "Content-Type": "text/html",
-            "Set-Cookie": "session=" + token + "; Path=/standalone/tokens; HttpOnly; Max-Age=" + (SESSION_TTL_MS / 1000),
+            "Set-Cookie": "session=" + token + "; Path=/; HttpOnly; SameSite=Strict; Max-Age=" + (SESSION_TTL_MS / 1000),
           });
           return res.end(html);
         }
