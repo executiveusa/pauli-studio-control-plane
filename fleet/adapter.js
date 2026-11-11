@@ -213,7 +213,7 @@ async function handleChat(body) {
     if (agentSlug === "tars" || agentSlug === "pi" || agentSlug === "jarvis") {
       fetch("http://127.0.0.1:4840/bridge", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "X-Observe-Secret": "pauli-observe-tailnet-2026" },
+        headers: { "Content-Type": "application/json", "X-Observe-Secret": process.env.OBSERVE_SECRET || "" },
         body: JSON.stringify({ agent: agentSlug, message: userMessage, response: content, source: "librechat" }),
         signal: AbortSignal.timeout(3000),
       }).catch(() => {});
