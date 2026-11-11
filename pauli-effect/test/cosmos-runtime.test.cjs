@@ -91,6 +91,11 @@ test("Cosmos reads full contract and optional Heart/Soul; rejects unauthenticate
 test("skills API has no embedded password and requires auth on mutating endpoints", () => {
   const content = fs.readFileSync(path.join(__dirname, "../agents/skills-api/server.js"), "utf8");
   assert.match(content, /process.env.SKILLS_ACCESS_PASSWORD/);
+  assert.doesNotMatch(content, /const ACCESS_PASSWORD = "[^"]+"/);
+  assert.match(content, /url.pathname.startsWith\("\/skills"\)/);
+  const observe = fs.readFileSync(path.join(__dirname, "../../observe/server.js"), "utf8");
+  assert.doesNotMatch(observe, /tsUser\.includes\("@"/);
+  assert.match(observe, /process\.env\.OBSERVE_SECRET/);
   for (const endpoint of [
     'url.pathname.endsWith("/execute")',
     'url.pathname === "/personas/active" && req.method === "POST"',
