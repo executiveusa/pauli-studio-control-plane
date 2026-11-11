@@ -158,7 +158,7 @@ async function routeToAgent(agentSlug, message) {
   payload[agent.field] = message;
   const resp = await fetch(agent.url + agent.endpoint, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", ...(agentSlug === "pi" && process.env.PI_AGENT_ACCESS_TOKEN ? { Authorization: "Bearer " + process.env.PI_AGENT_ACCESS_TOKEN } : {}) },
     body: JSON.stringify(payload),
     signal: AbortSignal.timeout(120000),
   });
