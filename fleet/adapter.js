@@ -159,7 +159,7 @@ async function routeToAgent(agentSlug, message) {
   try {
     const resp = await fetch(agent.url + agent.endpoint, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", ...(agentSlug === "pi" && process.env.PI_AGENT_ACCESS_TOKEN ? { Authorization: "Bearer " + process.env.PI_AGENT_ACCESS_TOKEN } : {}) },
       body: JSON.stringify(payload),
       signal: AbortSignal.timeout(120000),
     });
@@ -180,7 +180,7 @@ async function logTokenUsage(agent, model, tokensIn, tokensOut, cost, skillId, t
   try {
     await fetch(SKILLS_API + "/tokens/log", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", ...(process.env.SKILLS_ACCESS_PASSWORD ? { "x-access-key": process.env.SKILLS_ACCESS_PASSWORD } : {}) },
       body: JSON.stringify({ agent, model, tokens_in: tokensIn, tokens_out: tokensOut, cost, skill_id: skillId, task_type: taskType }),
       signal: AbortSignal.timeout(5000),
     });
