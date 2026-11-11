@@ -163,7 +163,7 @@ function checkAuth(req) {
   // shared secret in header OR Tailscale-forwarded header
   const auth = req.headers["x-observe-secret"] || "";
   const tsUser = req.headers["x-tailscale-userlogin"] || "";
-  if (SHARED_SECRET && typeof auth === "string" && auth.length === SHARED_SECRET.length && require("crypto").timingSafeEqual(Buffer.from(auth), Buffer.from(SHARED_SECRET))) return true;
+  if (SHARED_SECRET && typeof auth === "string" && Buffer.byteLength(auth) === Buffer.byteLength(SHARED_SECRET) && require("crypto").timingSafeEqual(Buffer.from(auth), Buffer.from(SHARED_SECRET))) return true;
   // Do not trust a client-supplied identity header; proxy authentication belongs at the edge.
   return false;
 }
