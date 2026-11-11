@@ -14,6 +14,7 @@
 - Never put these tokens into git, logs, chat, or ICM memory.
 - Bind agent services to loopback; use a private Tailscale tailnet, authenticated SSH, and scoped ACLs for desktop-to-VPS access.
 - Verify the actual service manager EnvironmentFile/secret injection and restart only affected units after review. Missing tokens fail closed.
+- Set a NEW ADMIN_TOKEN for Hermes dispatch (previous default was committed); set a NEW OBSERVE_SECRET on the observation service and fleet adapter (previous default was committed); no trust of spoofable identity request headers.
 - Audit other hardcoded values in the repo independently before any public exposure.
 
 ## Windows desktop setup
