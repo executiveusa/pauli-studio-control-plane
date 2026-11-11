@@ -73,6 +73,13 @@ test("Cosmos reads full contract and optional Heart/Soul; rejects unauthenticate
       body: JSON.stringify({ message: "test" }) });
     assert.equal(yesToken.status, 200);
     assert.equal((await yesToken.json()).response, "verified-response");
+    const mission = await fetch(base + "/mission", { method: "POST",
+      headers: { "content-type": "application/json", authorization: "Bearer synthetic-test-token" },
+      body: JSON.stringify({ mission: "Plan a synthetic change" }) });
+    assert.equal(mission.status, 200);
+    const missionBody = await mission.json();
+    assert.equal(missionBody.executed, false);
+    assert.equal(missionBody.phase, "planning_only");
   } finally {
     child.kill();
     await new Promise(resolve => child.once("exit", resolve));
