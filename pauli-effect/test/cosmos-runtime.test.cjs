@@ -33,7 +33,7 @@ test("Cosmos reads full contract and optional Heart/Soul; rejects unauthenticate
   fs.mkdirSync(agent, { recursive: true });
   fs.mkdirSync(guard, { recursive: true });
   const sentinel = "END_OF_CONTRACT_SENTINEL";
-  fs.writeFileSync(path.join(root, "AGENTS.md"), "ICM_GLOBAL_IDENTITY");
+  fs.writeFileSync(path.join(root, "AGENTS.md"), "ICM_GLOBAL_IDENTITY\n" + "G".repeat(5100) + "END_OF_GLOBAL_CONTRACT");
   fs.writeFileSync(path.join(root, "CONTEXT.md"), "MISSION_ROUTER");
   fs.writeFileSync(path.join(company, "HEART.md"), "HEART_OF_THE_COMPANY");
   fs.writeFileSync(path.join(company, "SOUL.md"), "SOUL_OF_THE_COMPANY");
@@ -45,6 +45,7 @@ test("Cosmos reads full contract and optional Heart/Soul; rejects unauthenticate
     const parsed = JSON.parse(body);
     const system = parsed.messages[0].content;
     assert.match(system, /COSMOS_IDENTITY/);
+    assert.match(system, /END_OF_GLOBAL_CONTRACT/);
     assert.match(system, /END_OF_CONTRACT_SENTINEL/);
     assert.match(system, /HEART_OF_THE_COMPANY/);
     assert.match(system, /SOUL_OF_THE_COMPANY/);
@@ -68,6 +69,10 @@ test("Cosmos reads full contract and optional Heart/Soul; rejects unauthenticate
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ message: "test" }) });
     assert.equal(noToken.status, 401);
+    const unicodeToken = await fetch(base + "/chat", { method: "POST",
+      headers: { "content-type": "application/json", authorization: "Bearer é" + "x".repeat(19) },
+      body: JSON.stringify({ message: "test" }) });
+    assert.equal(unicodeToken.status, 401);
     const yesToken = await fetch(base + "/chat", { method: "POST",
       headers: { "content-type": "application/json", authorization: "Bearer synthetic-test-token" },
       body: JSON.stringify({ message: "test" }) });
