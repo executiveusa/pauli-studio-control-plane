@@ -10,7 +10,7 @@ const PERSONA_DIR = path.join(ROOT, "agents/personas");
 const SHELVES = path.join(ROOT, "library/skills-icm");
 const DB_PATH = path.join(ROOT, "data/skills.db");
 const STANDALONE_DIR = path.join(ROOT, "agents/skills-api/standalone");
-const ACCESS_PASSWORD = "Sheraljean1";
+const ACCESS_PASSWORD = process.env.SKILLS_ACCESS_PASSWORD || "";
 const SESSION_TTL_MS = 30 * 60 * 1000;
 
 const sessions = new Map();
@@ -146,7 +146,7 @@ function getSession(req) {
 
 function checkAuth(req) {
   const key = req.headers["x-access-key"];
-  if (key === ACCESS_PASSWORD) return true;
+  if (ACCESS_PASSWORD && typeof key === "string" && key.length === ACCESS_PASSWORD.length && crypto.timingSafeEqual(Buffer.from(key), Buffer.from(ACCESS_PASSWORD))) return true;
   const sess = getSession(req);
   return !!sess;
 }
@@ -207,6 +207,7 @@ const server = http.createServer(async (req, res) => {
     }
 
     if (url.pathname.startsWith("/skills/") && url.pathname.endsWith("/execute") && req.method === "POST") {
+      if (!checkAuth(req)) return send(res, ACCESS_PASSWORD ? 401 : 503, {error:"Unauthorized or SKILLS_ACCESS_PASSWORD not configured"});
       const id = decodeURIComponent(url.pathname.split("/")[2]);
       const body = await parseBody(req);
       const agent = body.agent || "jarvis";
@@ -378,6 +379,7 @@ const server = http.createServer(async (req, res) => {
     }
 
     if (url.pathname === "/tokens/log" && req.method === "POST") {
+      if (!checkAuth(req)) return send(res, ACCESS_PASSWORD ? 401 : 503, {error:"Unauthorized or SKILLS_ACCESS_PASSWORD not configured"});
       const database = getDb();
       if (!database) return send(res, 500, { error: "SQLite not available" });
 
@@ -413,6 +415,7 @@ const server = http.createServer(async (req, res) => {
     }
 
     if (url.pathname === "/personas/active" && req.method === "POST") {
+      if (!checkAuth(req)) return send(res, ACCESS_PASSWORD ? 401 : 503, {error:"Unauthorized or SKILLS_ACCESS_PASSWORD not configured"});
       const body = await parseBody(req);
       const id = body.id || body.active || body.persona;
       if (!id) return send(res, 400, { error: "id required" });
@@ -464,7 +467,7 @@ button:hover{background:#6d28d9}
       req.on("end", () => {
         const params = new URLSearchParams(body);
         const pw = params.get("password");
-        if (pw === ACCESS_PASSWORD) {
+        if (ACCESS_PASSWORD && typeof pw === "string" && pw.length === ACCESS_PASSWORD.length && crypto.timingSafeEqual(Buffer.from(pw), Buffer.from(ACCESS_PASSWORD))) {
           const token = crypto.randomBytes(32).toString("hex");
           sessions.set(token, { created: Date.now() });
           const skillsFile = path.join(STANDALONE_DIR, "skills.html");
@@ -501,7 +504,7 @@ button:hover{background:#6d28d9}
       req.on("end", () => {
         const params = new URLSearchParams(body);
         const pw = params.get("password");
-        if (pw === ACCESS_PASSWORD) {
+        if (ACCESS_PASSWORD && typeof pw === "string" && pw.length === ACCESS_PASSWORD.length && crypto.timingSafeEqual(Buffer.from(pw), Buffer.from(ACCESS_PASSWORD))) {
           const token = crypto.randomBytes(32).toString("hex");
           sessions.set(token, { created: Date.now() });
           const tokensFile = path.join(STANDALONE_DIR, "tokens.html");
