@@ -36,7 +36,7 @@ button:disabled{opacity:.5;cursor:not-allowed}
 <div class="grid" id="skillsGrid"></div>
 <div class="result" id="resultBox" style="display:none"><h3 style="margin-bottom:8px">Execution Result</h3><pre id="resultContent"></pre></div>
 <script>
-const API="http://31.220.58.212:4820";
+const API=window.location.origin;
 let allSkills=[];
 async function load(){
 try{
