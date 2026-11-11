@@ -20,7 +20,7 @@ const path = require("path");
 
 const PORT = parseInt(process.env.PORT || "4840", 10);
 const POLL_MS = parseInt(process.env.POLL_MS || "3000", 10);
-const SHARED_SECRET = process.env.OBSERVE_SECRET || "pauli-observe-tailnet-2026";
+const SHARED_SECRET = process.env.OBSERVE_SECRET || "";
 const MISSIONS_DIR = process.env.MISSIONS_DIR || "/opt/pauli-effect/missions";
 const EVENTS_LOG = path.join(__dirname, "events.jsonl");
 
@@ -163,8 +163,8 @@ function checkAuth(req) {
   // shared secret in header OR Tailscale-forwarded header
   const auth = req.headers["x-observe-secret"] || "";
   const tsUser = req.headers["x-tailscale-userlogin"] || "";
-  if (auth === SHARED_SECRET) return true;
-  if (tsUser && tsUser.includes("@")) return true;  // Tailscale sets this when funnel/serve proxies
+  if (SHARED_SECRET && typeof auth === "string" && auth.length === SHARED_SECRET.length && require("crypto").timingSafeEqual(Buffer.from(auth), Buffer.from(SHARED_SECRET))) return true;
+  // Do not trust a client-supplied identity header; proxy authentication belongs at the edge.
   return false;
 }
 
